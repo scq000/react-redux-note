@@ -1,0 +1,35 @@
+.note-list-wrap {
+    width: 200px;
+    height: 100%;
+    background: #00cf87;
+    color: #fff;
+    text-align: center;
+    float: left;
+}
+
+.note-list-item {
+    height: 50px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.note-list-item .title {
+    margin-left: 10px;
+}
+
+.btn {
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn.remove {
+    font-size: 12px;
+    margin-right: 5px;
+    padding: 5px;
+}
