@@ -19,6 +19,9 @@ export const notes = (state = [], {type, payload}) => {
 export const isFetchingData = (state = false, {type}) => {
     switch (type) {
         case types.FETCH_NOTES:
+        case types.BEGIN_UPDATE_NOTE:
+        case types.BEGIN_ADD_NOTE:
+        case types.BEGIN_DELETE_NOTE:
             return true;
         default:
             return false;
