@@ -27,6 +27,7 @@ router.get('/', function(req, res) {
 
 router.route('/notes')
     .post(function(req, res) {
+	console.log(req.body);
         var note = new Note();
         note.title = req.body.title;
         note.content= req.body.content;
@@ -61,15 +62,18 @@ router.route('/notes/:note_id')
         });
     })
     .put(function(req, res) {
-        Note.findById(req.params.note_id, function(err, note) {
-            if(err) res.send(err);
-
-            note.name = req.body.name;
-            note.save(function(err) {
-                if(err) res.send(err);
-                res.json({ message: 'Note updated!'})
-            });
-        });
+    	if(req.body || req.content) {
+            Note.findById(req.params.note_id, function(err, note) {
+           	   if (err) res.send(err);
+           	   note.name = req.body.name;
+           	   note.save(function(err) {
+           	     if (err) res.send(err);
+           	     res.json({
+           	       message: 'Note updated!'
+           	     })
+           	   });
+       	   });
+        }
     })
     .delete(function(req, res) {
         Note.remove({
