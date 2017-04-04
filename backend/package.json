@@ -2,10 +2,12 @@
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
+    "forever": "^0.15.3",
+    "forever-monitor": "^1.7.1",
     "mongoose": "^4.9.2",
     "nodemon": "^1.11.0"
   },
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "forever node_modules/nodemon/bin/nodemon.js --exitcrash app.js"
   }
 }
