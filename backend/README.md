@@ -18,7 +18,10 @@ npm start
 以下是一些在开发过程中可能会有所帮助的工具：
 
 [json generator](http://beta.json-generator.com/) 在线json生成器，可用于方便地生成假数据
+
 mock server:
 [pretender](https://github.com/pretenderjs/pretender#timing-parameter) restful mock server
+
 [faker](https://github.com/marak/faker.js) 可以生成大量假数据
+
 [RAP](https://github.com/thx/RAP) web接口管理工具，功能十分强大，可以一试
